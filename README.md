@@ -28,11 +28,26 @@ firstName("Steven"); //computeds (ie fullname) have already been recalculated wh
 
 **computed**
 
-A computed wraps a function that uses one or more observables, and executes it whenever one of these observables has a new value set, caching the result for when the computed is read.
-Computeds are observers of observables that subscribe and unsubscribe automatically, maintaining a subscription to those observables (current dependencies) which were read on the last invocation.
+A computed wraps a function that uses one or more observables or computeds, and executes it whenever one of the observables has a new value set, or one of the computeds gets a new result, caching the result for when it is read.
 
   - read the value of a computed:
 ```  
 fullName(); //Steven Sanderson
 ```
+ 
+Computeds are observers that subscribe and unsubscribe automatically, maintaining a subscription to those observables and computeds (their current dependencies) which were read on the last invocation:
+```
+var male = new or.obs(false);
+var title = new or.com(function(){ return male()?'Mr.':'Ms.' ));
+```
+
+They are also observables which can be observed by other computeds, allowing us to compose computeds:
+
+```
+var titled = new or.com(function(){ return title() + fullName(); ));
+male(true); // both title and titled have been recalculated
+titled(); // Mr. Steven Sanderson
+```
+
+
 
