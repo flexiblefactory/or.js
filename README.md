@@ -6,7 +6,6 @@ We define two types:
 **observable**...
 ```
 var firstName = new or.obs("Steve"), lastName = new or.obs("Sanderson");
-
 ```
 ...and **computed**:
 ```
