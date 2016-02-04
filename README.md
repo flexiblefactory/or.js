@@ -23,7 +23,6 @@ firstName(); //Steve
   - set a new value:
 ```  
 firstName("Steven"); //computeds (ie fullname) have already been recalculated when this call returns
-
 ```
 
 
