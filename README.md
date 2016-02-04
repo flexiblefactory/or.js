@@ -37,15 +37,24 @@ fullName(); //Steven Sanderson
  
 Computeds are observers that subscribe and unsubscribe automatically, maintaining a subscription to those observables and computeds (their current dependencies) which were read on the last invocation:
 ```
+var mr = new or.obs('Mr.');
+var ms = new or.obs('Ms.');
 var male = new or.obs(false);
-var title = new or.com(function(){ return male()?'Mr.':'Ms.' ));
+var title = new or.com(function(){ return male()? mr():ms() ));
+
+//currently title depends on male and ms 
+
+male(true); // both title and titled have been recalculated and so have their dependencies.
+
+//now title depends on male and mr 
 ```
+
 
 They are also observables which can be observed by other computeds, allowing us to compose computeds:
 
 ```
 var titled = new or.com(function(){ return title() + fullName(); ));
-male(true); // both title and titled have been recalculated
+
 titled(); // Mr. Steven Sanderson
 ```
 
