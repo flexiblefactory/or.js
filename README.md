@@ -30,7 +30,7 @@ firstName("Steven"); //computeds (ie fullname) have already been recalculated wh
 **computed**
 
 A computed wraps a function that uses one or more observables, and executes it whenever one of these observables has a new value set, caching the result for when the computed is read.
-Computeds are observers of observables that subscribe and unsubscribe automatically, based on which observables were read on the last invocation.
+Computeds are observers of observables that subscribe and unsubscribe automatically, maintaining a subscription to those observables (current dependencies) which were read on the last invocation.
 
   - read the value of a computed:
 ```  
