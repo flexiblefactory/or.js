@@ -5,8 +5,8 @@ We define two types:
 
 **observable**...
 ```
-var firstName = new or.obs("Steve");
-var lastName = new or.obs("Sanderson");
+var firstName = new or.obs("Steve"), lastName = new or.obs("Sanderson");
+
 ```
 ...and **computed**:
 ```
