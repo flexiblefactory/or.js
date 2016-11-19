@@ -40,15 +40,15 @@ var loadersByExtension = function (obj) {
 module.exports = function(options) {
 
 
-console.log('options.lib:'+options.lib)
+	console.log('options.lib:'+options.lib)
 	if(options.lib){
 
 	entry = {
-		or: ["./app/or.js"],
-		"react-or": ["./app/react-or.js"]
+		or: ["./app/or-core.js"],
+		"react-or": ["./app/react-or-core.js"]
 	};
 
-	externals = {"or":"umd or", "react": "umd react", "react-dom": "umd react-dom"};
+	externals = {"or":"umd or-core", "react": "umd react", "react-dom": "umd react-dom"};
 
 	}else{
 

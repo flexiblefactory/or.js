@@ -1,4 +1,4 @@
-import or from 'or'
+import or from 'or-core'
 import React from 'react'
 import ReactDOM from 'react-dom'
 /////////////////////// react hook ////////////////////////
