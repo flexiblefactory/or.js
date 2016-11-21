@@ -170,14 +170,21 @@ React-or also provides input, checkbox, radio and select components ready to be 
 <BoundInput value={foo()} />
 ```
 
+# Getting Started
+
+```
+npm install --save react-or-core
+```
+
+
 #Example todo app
 
 ```
 
 import React from 'react'
 import ReactDOM from 'react-dom'
-import or from 'or'
-import {ReactiveComponent, BoundInput, BoundCheckbox, BoundRadio, BoundSelect} from 'react-or'
+import or from 'or-core'
+import {ReactiveComponent, BoundInput, BoundCheckbox, BoundRadio, BoundSelect} from 'react-or-core'
 
 let id=0, store = {},  actions = {};
 
@@ -226,9 +233,26 @@ var e = ReactDOM.render(<div><TodoApp store={store} actions={actions} /></div>, 
 
 ```
 
-# Getting Started
+# Building and developing the libraries
+
+Build the libraries
 
 ```
-npm install --save react-or-core
+npm run build-library
 ```
+
+Build the example project:
+
+```
+npm run build
+```
+
+# Start a dev server for devlopment:
+
+```
+npm run start-dev
+npm run hot-dev-server
+```
+
+Then open a browser at: **http://localhost:8080**
 
