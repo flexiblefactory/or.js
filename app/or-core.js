@@ -9,11 +9,6 @@ var or=(function(){
     oq=[];
     rq=[];
   },
-  abort = function(){
-    oq=[];
-    rq=[];
-    off=false;
-  },
   commit = function(){
     Array.from(new Set(oq)).concat(Array.from(new Set(rq))).forEach(f=>f());;
     off=false;
@@ -81,7 +76,7 @@ var or=(function(){
       };
     };
 
-    o.reduce = f => o(f(o()));
+    o.set = f => o(f(o()));
     o.clone = () => new or.obs(o());
     o.getName=()=>name;
     return o;
