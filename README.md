@@ -247,7 +247,7 @@ Build the example project:
 npm run build
 ```
 
-# Start a dev server for devlopment:
+# Start a dev server for development:
 
 ```
 npm run start-dev
