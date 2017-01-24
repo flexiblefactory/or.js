@@ -197,7 +197,7 @@ const TodoItem = ReactiveComponent.create(TodoItemPure);
 const TodoAppPure = ({store,actions}) => (
   
   <div>
-    <BoundInput placeholder="type here" ds={store.newTodoText} />
+    <BoundInput placeholder="type here" value={store.newTodoText} />
     <button onClick={e => {actions.addTodo(store.newTodoText());actions.clearTodo();}}> + </button>
     { Object.keys(store.filters).map( k => <a key={k} onClick={ e=> actions.changeFilter(k) } href="#"> {k} </a>  ) }
     <ul> {store.filteredTodos().map( todo => <TodoItem {...{todo,actions,key:todo.id}} />)} </ul>
