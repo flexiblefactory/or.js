@@ -247,10 +247,15 @@ Build the example project:
 npm run build
 ```
 
-# Start a dev server for development:
+# Start both of these servers in separate windows for development:
 
 ```
 npm run start-dev
+```
+
+... and in a new terminal:
+
+```
 npm run hot-dev-server
 ```
 
