@@ -256,4 +256,3 @@ npm run hot-dev-server
 
 Then open a browser at: **http://localhost:8080**
 
-Ta-da!
