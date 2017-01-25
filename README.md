@@ -238,7 +238,7 @@ var e = ReactDOM.render(<div><TodoApp store={store} actions={actions} /></div>, 
 Build the libraries
 
 ```
-npm run build-library
+npm run build-lib
 ```
 
 Build the example project:
@@ -247,7 +247,7 @@ Build the example project:
 npm run build
 ```
 
-# Start a dev server for devlopment:
+# Start a dev server for development:
 
 ```
 npm run start-dev
