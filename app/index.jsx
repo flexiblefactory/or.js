@@ -1,7 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import or from 'or-core'
-import {ReactiveComponent, BoundInput, BoundCheckbox, BoundRadio, BoundSelect} from 'react-or-core'
+import {or, ReactiveComponent, BoundInput, BoundCheckbox, BoundRadio, BoundSelect} from 'react-or-core'
 
 let id=0, store = {},  red = {};
 const newTodo = text => { return { id:id++, text:  new or.obs(text,'text'), completed: new or.obs(false,'completed') }};
